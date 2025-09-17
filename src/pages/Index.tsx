@@ -152,6 +152,23 @@ const Index = () => {
         </div>
       </div>
 
+      {/* Footer with API Credits */}
+      <footer className="bg-gradient-card border-t border-border/20 mt-12 py-6">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-muted-foreground">
+            <span>Powered by AI & ML APIs</span>
+            <span>•</span>
+            <span>Weather API Integration</span>
+            <span>•</span>
+            <span>Computer Vision Models</span>
+            <span>•</span>
+            <span>IoT Data Analytics</span>
+          </div>
+          <p className="text-xs text-muted-foreground/70 mt-2">
+            Built with React, TypeScript & Tailwind CSS
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
