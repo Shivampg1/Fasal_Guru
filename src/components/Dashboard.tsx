@@ -3,13 +3,10 @@ import { Button } from "@/components/ui/button";
 import { 
   Camera, 
   TestTube, 
-  Activity, 
+  Activity,
   Cloud, 
   Mic,
-  ArrowRight,
-  Upload,
-  TrendingUp,
-  AlertTriangle
+  ArrowRight
 } from "lucide-react";
 import cropIcon from "@/assets/crop-icon.png";
 import soilIcon from "@/assets/soil-icon.png";
@@ -54,12 +51,6 @@ const Dashboard = () => {
     }
   ];
 
-  const quickStats = [
-    { label: "Active Sensors", value: "12", trend: "+2", color: "success" },
-    { label: "Disease Scans", value: "45", trend: "+8", color: "primary" },
-    { label: "Soil Reports", value: "23", trend: "+5", color: "warning" },
-    { label: "Weather Alerts", value: "3", trend: "0", color: "danger" }
-  ];
 
   return (
     <div className="space-y-6">
@@ -75,22 +66,6 @@ const Dashboard = () => {
         </div>
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
         <div className="absolute bottom-0 right-0 w-20 h-20 bg-white/10 rounded-full translate-y-4 translate-x-4"></div>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {quickStats.map((stat, index) => (
-          <Card key={index} className="bg-gradient-card border-0 shadow-soft">
-            <CardContent className="p-4 text-center">
-              <div className={`text-2xl font-bold text-${stat.color} mb-1`}>{stat.value}</div>
-              <div className="text-sm text-muted-foreground mb-2">{stat.label}</div>
-              <div className={`text-xs flex items-center justify-center gap-1 text-${stat.color}`}>
-                <TrendingUp className="h-3 w-3" />
-                {stat.trend}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
       </div>
 
       {/* Main Modules */}
@@ -125,51 +100,6 @@ const Dashboard = () => {
         ))}
       </div>
 
-      {/* Recent Activity */}
-      <Card className="bg-gradient-card border-0 shadow-soft">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Activity className="h-5 w-5 text-primary" />
-            Recent Activity
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-3">
-            <div className="flex items-center justify-between p-3 bg-success/5 rounded-lg">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-success rounded-full"></div>
-                <div>
-                  <p className="font-medium text-sm">Tomato leaf analysis completed</p>
-                  <p className="text-xs text-muted-foreground">2 hours ago</p>
-                </div>
-              </div>
-              <Button variant="ghost" size="sm">View</Button>
-            </div>
-            
-            <div className="flex items-center justify-between p-3 bg-warning/5 rounded-lg">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-warning rounded-full"></div>
-                <div>
-                  <p className="font-medium text-sm">Soil pH level alert received</p>
-                  <p className="text-xs text-muted-foreground">4 hours ago</p>
-                </div>
-              </div>
-              <Button variant="ghost" size="sm">View</Button>
-            </div>
-            
-            <div className="flex items-center justify-between p-3 bg-primary/5 rounded-lg">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <div>
-                  <p className="font-medium text-sm">IoT sensor data synced</p>
-                  <p className="text-xs text-muted-foreground">6 hours ago</p>
-                </div>
-              </div>
-              <Button variant="ghost" size="sm">View</Button>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 };
