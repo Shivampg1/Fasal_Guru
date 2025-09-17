@@ -48,7 +48,7 @@ const Dashboard = () => {
       icon: <Cloud className="h-8 w-8" />,
       color: "secondary",
       stats: "7-Day Forecast",
-      link: "https://weather-app-navy-nine-35.vercel.app/" // ✅ External link
+      link: "https://weather-app-navy-nine-35.vercel.app/" // ✅ Weather link
     }
   ];
 
@@ -59,10 +59,14 @@ const Dashboard = () => {
         <div className="relative z-10">
           <h2 className="text-2xl font-bold mb-2">Welcome to FasalGuru</h2>
           <p className="text-white/90 mb-4">Your AI-powered farming assistant for better crop management</p>
-          <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
-            <Mic className="h-4 w-4 mr-2" />
-            Ask Voice Assistant
-          </Button>
+          
+          {/* ✅ Voice Assistant Button now opens external Jarvis link */}
+          <a href="https://jarvis-flask-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Mic className="h-4 w-4 mr-2" />
+              Ask Voice Assistant
+            </Button>
+          </a>
         </div>
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
         <div className="absolute bottom-0 right-0 w-20 h-20 bg-white/10 rounded-full translate-y-4 translate-x-4"></div>
