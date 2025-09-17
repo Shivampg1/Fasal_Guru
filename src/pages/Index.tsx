@@ -152,15 +152,6 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Backend Integration Notice */}
-      <div className="fixed bottom-4 right-4 max-w-sm">
-        <div className="bg-primary text-primary-foreground p-4 rounded-lg shadow-glow">
-          <h4 className="font-medium mb-2">Ready for Backend Integration</h4>
-          <p className="text-xs text-primary-foreground/90">
-            Connect to Supabase to enable ML models, authentication, database storage, and real API integrations.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
