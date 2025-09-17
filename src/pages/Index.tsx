@@ -98,9 +98,14 @@ const Index = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 Welcome to <span className="text-warning">FasalGuru</span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-6">
-                Your AI-powered farming assistant for smarter agriculture
-              </p>
+              <div className="mb-6 h-16 flex flex-col justify-center">
+                <p className="text-xl md:text-2xl text-white/90 animate-fade-in">
+                  फसल की हर बात, गुरु के साथ!
+                </p>
+                <p className="text-lg md:text-xl text-white/80 animate-fade-in" style={{ animationDelay: '1s' }}>
+                  Every crop matter, with the guru's guidance!
+                </p>
+              </div>
               <div className="flex flex-wrap gap-4">
                 <span className="bg-white/20 px-4 py-2 rounded-full text-sm">🌾 Crop Disease Detection</span>
                 <span className="bg-white/20 px-4 py-2 rounded-full text-sm">🧪 Soil Analysis</span>
