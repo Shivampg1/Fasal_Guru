@@ -41,14 +41,16 @@ const Dashboard = () => {
       color: "primary",
       stats: "Live Data"
     },
-    {
-      id: "weather",
-      title: "Weather Forecast",
-      description: "7-day weather predictions and agricultural advisories",
-      icon: <Cloud className="h-8 w-8" />,
-      color: "secondary",
-      stats: "7-Day Forecast"
-    }
+{
+  id: "weather",
+  title: "Weather Forecast",
+  description: "7-day weather predictions and agricultural advisories",
+  icon: <Cloud className="h-8 w-8" />,
+  color: "secondary",
+  stats: "7-Day Forecast",
+  link: "https://weather-app-navy-nine-35.vercel.app/"  // ✅ Add your link here
+}
+
   ];
 
 
