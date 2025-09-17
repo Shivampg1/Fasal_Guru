@@ -41,18 +41,16 @@ const Dashboard = () => {
       color: "primary",
       stats: "Live Data"
     },
-{
-  id: "weather",
-  title: "Weather Forecast",
-  description: "7-day weather predictions and agricultural advisories",
-  icon: <Cloud className="h-8 w-8" />,
-  color: "secondary",
-  stats: "7-Day Forecast",
-  link: "https://weather-app-navy-nine-35.vercel.app/"  // ✅ Add your link here
-}
-
+    {
+      id: "weather",
+      title: "Weather Forecast",
+      description: "7-day weather predictions and agricultural advisories",
+      icon: <Cloud className="h-8 w-8" />,
+      color: "secondary",
+      stats: "7-Day Forecast",
+      link: "https://weather-app-navy-nine-35.vercel.app/" // ✅ External link
+    }
   ];
-
 
   return (
     <div className="space-y-6">
@@ -73,7 +71,10 @@ const Dashboard = () => {
       {/* Main Modules */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {modules.map((module) => (
-          <Card key={module.id} className="group hover:shadow-strong transition-all duration-300 cursor-pointer bg-gradient-card border-0 overflow-hidden">
+          <Card 
+            key={module.id} 
+            className="group hover:shadow-strong transition-all duration-300 cursor-pointer bg-gradient-card border-0 overflow-hidden"
+          >
             <CardHeader className="pb-3">
               <div className="flex items-center justify-between">
                 <div className={`p-3 rounded-lg bg-${module.color}/10`}>
@@ -92,16 +93,27 @@ const Dashboard = () => {
                 {module.description}
               </CardDescription>
             </CardHeader>
+
             <CardContent>
-              <Button className="w-full group-hover:bg-primary-hover transition-colors" variant="default">
-                Open Module
-                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              {module.link ? (
+                // ✅ External link (opens in new tab)
+                <a href={module.link} target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full group-hover:bg-primary-hover transition-colors" variant="default">
+                    Open Module
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
+              ) : (
+                // Placeholder button for future internal modules
+                <Button className="w-full group-hover:bg-primary-hover transition-colors" variant="default">
+                  Open Module
+                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              )}
             </CardContent>
           </Card>
         ))}
       </div>
-
     </div>
   );
 };
