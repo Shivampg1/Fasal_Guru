@@ -19,10 +19,16 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="relative">
+          <Button
+             variant="ghost"
+             size="icon"
+             className="relative"
+             onClick={() => window.open("https://jarvis-flask-alpha.vercel.app/", "_blank")}
+             >
             <Mic className="h-5 w-5 text-success" />
             <span className="absolute -top-1 -right-1 w-3 h-3 bg-success rounded-full animate-pulse"></span>
           </Button>
+
           
           <Button variant="ghost" size="icon" className="relative">
             <Bell className="h-5 w-5" />
