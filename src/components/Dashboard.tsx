@@ -22,6 +22,7 @@ const Dashboard = () => {
       bgImage: cropIcon,
       color: "success",
       stats: "94% Accuracy"
+      link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app" // ✅ Add this line
     },
     {
       id: "soil-analysis", 
