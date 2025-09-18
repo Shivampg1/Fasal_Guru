@@ -14,16 +14,16 @@ import iotIcon from "@/assets/iot-icon.png";
 
 const Dashboard = () => {
   const modules = [
-    {
-      id: "crop-disease",
-      title: "Crop Disease Detection",
-      description: "Upload crop images to detect diseases and get treatment recommendations",
-      icon: <Camera className="h-8 w-8" />,
-      bgImage: cropIcon,
-      color: "success",
-      stats: "94% Accuracy"
-      link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app" // ✅ Add this line
-    },
+ {
+  id: "crop-disease",
+  title: "Crop Disease Detection",
+  description: "Upload crop images to detect diseases and get treatment recommendations",
+  icon: <Camera className="h-8 w-8" />,
+  bgImage: cropIcon,
+  color: "success",
+  stats: "94% Accuracy",
+  link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app" // ✅ Add this line
+},
     {
       id: "soil-analysis", 
       title: "Soil Analysis",
