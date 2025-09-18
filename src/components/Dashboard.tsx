@@ -31,8 +31,10 @@ const Dashboard = () => {
       icon: <TestTube className="h-8 w-8" />,
       bgImage: soilIcon,
       color: "warning",
-      stats: "NPK Analysis"
+      stats: "NPK Analysis",
+      link: "https://huggingface.co/spaces/soildetect/soil-detection-app" // ✅ Added Soil Analysis link
     },
+
     {
       id: "iot-dashboard",
       title: "IoT Sensor Data", 
