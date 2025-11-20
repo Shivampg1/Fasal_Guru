@@ -72,7 +72,7 @@ const Dashboard = () => {
       id: "insurance",
       title: "PMFBY Insurance",
       description: "Enrol farmers, submit claims & get yield estimation",
-      icon: <img src={insuranceIcon} className="h-24 w-24" alt="Insurance Icon" />,
+      icon: <img src={insuranceIcon} className="h-15 w-24" alt="Insurance Icon" />,
       color: "accent",
       stats: "Insurance",
       link: "/insurance",
