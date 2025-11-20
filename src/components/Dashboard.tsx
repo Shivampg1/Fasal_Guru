@@ -10,6 +10,8 @@ import {
   FileText
 } from "lucide-react";
 
+import { Link } from "react-router-dom"; // <-- IMPORTANT
+
 import cropIcon from "@/assets/crop-icon.png";
 import soilIcon from "@/assets/soil-icon.png";
 import iotIcon from "@/assets/iot-icon.png";
@@ -24,7 +26,8 @@ const Dashboard = () => {
       bgImage: cropIcon,
       color: "success",
       stats: "94% Accuracy",
-      link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app"
+      link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app",
+      external: true
     },
 
     {
@@ -35,7 +38,8 @@ const Dashboard = () => {
       bgImage: soilIcon,
       color: "warning",
       stats: "NPK Analysis",
-      link: "https://huggingface.co/spaces/soildetect/soil-detection-app"
+      link: "https://huggingface.co/spaces/soildetect/soil-detection-app",
+      external: true
     },
 
     {
@@ -45,7 +49,9 @@ const Dashboard = () => {
       icon: <Activity className="h-8 w-8" />,
       bgImage: iotIcon,
       color: "primary",
-      stats: "Live Data"
+      stats: "Live Data",
+      link: "",
+      external: false
     },
 
     {
@@ -55,7 +61,8 @@ const Dashboard = () => {
       icon: <Cloud className="h-8 w-8" />,
       color: "secondary",
       stats: "7-Day Forecast",
-      link: "https://weather-app-navy-nine-35.vercel.app/"
+      link: "https://weather-app-navy-nine-35.vercel.app/",
+      external: true
     },
 
     // ⭐ NEW INSURANCE CARD
@@ -66,7 +73,8 @@ const Dashboard = () => {
       icon: <FileText className="h-8 w-8" />,
       color: "accent",
       stats: "Insurance",
-      link: "/insurance" // navigates to insurance.tsx
+      link: "/insurance",
+      external: false
     }
   ];
 
@@ -114,18 +122,22 @@ const Dashboard = () => {
             </CardHeader>
 
             <CardContent>
-              {module.link ? (
-                <a href={module.link} target={module.link.startsWith("http") ? "_blank" : ""}>
-                  <Button className="w-full group-hover:bg-primary-hover transition-colors" variant="default">
+              {module.external ? (
+                // 🌐 External link (open in new tab)
+                <a href={module.link} target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full group-hover:bg-primary-hover transition-colors">
                     Open Module
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </a>
               ) : (
-                <Button className="w-full group-hover:bg-primary-hover transition-colors" variant="default">
-                  Open Module
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                // 🔗 Internal routing using React Router
+                <Link to={module.link}>
+                  <Button className="w-full group-hover:bg-primary-hover transition-colors">
+                    Open Module
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               )}
             </CardContent>
           </Card>
