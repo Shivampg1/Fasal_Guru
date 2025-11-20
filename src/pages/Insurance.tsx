@@ -62,12 +62,23 @@ export default function Insurance() {
     setResponse(res);
   };
 
-  // Yield handler
-    const handleYield = async () => {
-    const res = await getYield(yieldData.parcel_geo);
-    console.log(res);
-    setResponse(res);
-  };
+  // ----------------------
+// ⭐ Yield handler
+// ----------------------
+const handleYield = async () => {
+  if (!yieldData.farm_location) {
+    alert("Enter parcel_geo value!");
+    return;
+  }
+
+  console.log("Sending parcel_geo:", yieldData.farm_location);
+
+  const res = await getYield(yieldData.farm_location);
+  console.log("Yield Response:", res);
+
+  setResponse(res);
+};
+
 
 
   return (
@@ -118,27 +129,27 @@ export default function Insurance() {
         </button>
       </div>
 
-      {/* Yield */}
-      <div className="border p-5 rounded-xl mb-8">
-        <h2 className="text-xl font-semibold mb-3">Yield Estimation</h2>
-        {Object.keys(yieldData).map((field) => (
-          <input
-            key={field}
-            className="border p-2 w-full mb-2 rounded"
-            placeholder={field}
-            value={(yieldData as any)[field]}
-            onChange={(e) =>
-              handleChange(setYieldData, field, e.target.value)
-            }
-          />
-        ))}
-        <button
-          className="bg-orange-600 text-white px-4 py-2 rounded"
-          onClick={handleYield}
-        >
-          Get Yield Prediction
-        </button>
-      </div>
+    {/* ⭐ Yield Estimation */}
+<div className="border p-5 rounded-xl mb-8">
+  <h2 className="text-xl font-semibold mb-3">Yield Estimation</h2>
+
+  <input
+    className="border p-2 w-full mb-2 rounded"
+    placeholder="parcel_geo (example: 28.460)"
+    value={yieldData.farm_location}
+    onChange={(e) =>
+      setYieldData({ ...yieldData, farm_location: e.target.value })
+    }
+  />
+
+  <button
+    className="bg-orange-600 text-white px-4 py-2 rounded"
+    onClick={handleYield}
+  >
+    Get Yield Prediction
+  </button>
+</div>
+
 
       {/* Response */}
       {response && (
