@@ -6,44 +6,48 @@ import {
   Activity,
   Cloud, 
   Mic,
-  ArrowRight
+  ArrowRight,
+  FileText
 } from "lucide-react";
+
 import cropIcon from "@/assets/crop-icon.png";
 import soilIcon from "@/assets/soil-icon.png";
 import iotIcon from "@/assets/iot-icon.png";
 
 const Dashboard = () => {
   const modules = [
- {
-  id: "crop-disease",
-  title: "Crop Disease Detection",
-  description: "Upload crop images to detect diseases and get treatment recommendations",
-  icon: <Camera className="h-8 w-8" />,
-  bgImage: cropIcon,
-  color: "success",
-  stats: "94% Accuracy",
-  link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app" // ✅ Add this line
-},
     {
-      id: "soil-analysis", 
+      id: "crop-disease",
+      title: "Crop Disease Detection",
+      description: "Upload crop images to detect diseases and get treatment recommendations",
+      icon: <Camera className="h-8 w-8" />,
+      bgImage: cropIcon,
+      color: "success",
+      stats: "94% Accuracy",
+      link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app"
+    },
+
+    {
+      id: "soil-analysis",
       title: "Soil Analysis",
       description: "Analyze soil health, nutrients and get fertilizer recommendations",
       icon: <TestTube className="h-8 w-8" />,
       bgImage: soilIcon,
       color: "warning",
       stats: "NPK Analysis",
-      link: "https://huggingface.co/spaces/soildetect/soil-detection-app" // ✅ Added Soil Analysis link
+      link: "https://huggingface.co/spaces/soildetect/soil-detection-app"
     },
 
     {
       id: "iot-dashboard",
-      title: "IoT Sensor Data", 
+      title: "IoT Sensor Data",
       description: "Monitor real-time environmental conditions and farm parameters",
       icon: <Activity className="h-8 w-8" />,
       bgImage: iotIcon,
       color: "primary",
       stats: "Live Data"
     },
+
     {
       id: "weather",
       title: "Weather Forecast",
@@ -51,7 +55,18 @@ const Dashboard = () => {
       icon: <Cloud className="h-8 w-8" />,
       color: "secondary",
       stats: "7-Day Forecast",
-      link: "https://weather-app-navy-nine-35.vercel.app/" // ✅ Weather link
+      link: "https://weather-app-navy-nine-35.vercel.app/"
+    },
+
+    // ⭐ NEW INSURANCE CARD
+    {
+      id: "insurance",
+      title: "PMFBY Insurance",
+      description: "Enrol farmers, submit claims & get yield estimation",
+      icon: <FileText className="h-8 w-8" />,
+      color: "accent",
+      stats: "Insurance",
+      link: "/insurance" // navigates to insurance.tsx
     }
   ];
 
@@ -62,8 +77,7 @@ const Dashboard = () => {
         <div className="relative z-10">
           <h2 className="text-2xl font-bold mb-2">Welcome to FasalGuru</h2>
           <p className="text-white/90 mb-4">Your AI-powered farming assistant for better crop management</p>
-          
-          {/* ✅ Voice Assistant Button now opens external Jarvis link */}
+
           <a href="https://jarvis-flask-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
             <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
               <Mic className="h-4 w-4 mr-2" />
@@ -71,15 +85,13 @@ const Dashboard = () => {
             </Button>
           </a>
         </div>
-        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
-        <div className="absolute bottom-0 right-0 w-20 h-20 bg-white/10 rounded-full translate-y-4 translate-x-4"></div>
       </div>
 
       {/* Main Modules */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {modules.map((module) => (
           <Card 
-            key={module.id} 
+            key={module.id}
             className="group hover:shadow-strong transition-all duration-300 cursor-pointer bg-gradient-card border-0 overflow-hidden"
           >
             <CardHeader className="pb-3">
@@ -103,15 +115,13 @@ const Dashboard = () => {
 
             <CardContent>
               {module.link ? (
-                // ✅ External link (opens in new tab)
-                <a href={module.link} target="_blank" rel="noopener noreferrer">
+                <a href={module.link} target={module.link.startsWith("http") ? "_blank" : ""}>
                   <Button className="w-full group-hover:bg-primary-hover transition-colors" variant="default">
                     Open Module
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </a>
               ) : (
-                // Placeholder button for future internal modules
                 <Button className="w-full group-hover:bg-primary-hover transition-colors" variant="default">
                   Open Module
                   <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
