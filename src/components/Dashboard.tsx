@@ -12,9 +12,11 @@ import {
 
 import { Link } from "react-router-dom"; // <-- IMPORTANT
 
+import insuranceIcon from "@/assets/insurance-icon.png";
 import cropIcon from "@/assets/crop-icon.png";
 import soilIcon from "@/assets/soil-icon.png";
 import iotIcon from "@/assets/iot-icon.png";
+
 
 const Dashboard = () => {
   const modules = [
@@ -70,7 +72,7 @@ const Dashboard = () => {
       id: "insurance",
       title: "PMFBY Insurance",
       description: "Enrol farmers, submit claims & get yield estimation",
-      icon: <FileText className="h-8 w-8" />,
+      icon: <img src={insuranceIcon} className="h-10 w-10" alt="Insurance Icon" />,
       color: "accent",
       stats: "Insurance",
       link: "/insurance",
