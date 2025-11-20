@@ -66,18 +66,24 @@ export default function Insurance() {
 // ⭐ Yield handler
 // ----------------------
 const handleYield = async () => {
-  if (!yieldData.farm_location) {
-    alert("Enter parcel_geo value!");
+  const parcel = yieldData.farm_location.trim();
+
+  if (!parcel) {
+    alert("Please enter parcel_geo");
     return;
   }
 
-  console.log("Sending parcel_geo:", yieldData.farm_location);
+  console.log("Calling yield API with:", parcel);
 
-  const res = await getYield(yieldData.farm_location);
-  console.log("Yield Response:", res);
-
-  setResponse(res);
+  try {
+    const res = await getYield(parcel);
+    console.log("Yield Response:", res);
+    setResponse(res);
+  } catch (err) {
+    console.error("Yield API error:", err);
+  }
 };
+
 
 
 
@@ -129,7 +135,7 @@ const handleYield = async () => {
         </button>
       </div>
 
-    {/* ⭐ Yield Estimation */}
+   {/* Yield Estimation */}
 <div className="border p-5 rounded-xl mb-8">
   <h2 className="text-xl font-semibold mb-3">Yield Estimation</h2>
 
@@ -149,6 +155,7 @@ const handleYield = async () => {
     Get Yield Prediction
   </button>
 </div>
+
 
 
       {/* Response */}
