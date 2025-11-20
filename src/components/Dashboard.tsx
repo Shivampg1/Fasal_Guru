@@ -12,11 +12,12 @@ import {
 
 import { Link } from "react-router-dom"; // <-- IMPORTANT
 
+import weatherIcon from "@/assets/weather-icon.png";
 import insuranceIcon from "@/assets/insurance-icon.png";
 import cropIcon from "@/assets/crop-icon.png";
 import soilIcon from "@/assets/soil-icon.png";
 import iotIcon from "@/assets/iot-icon.png";
-import weatherIcon from "@/assets/weather-icon.png";
+
 
 
 const Dashboard = () => {
