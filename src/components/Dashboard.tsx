@@ -16,6 +16,7 @@ import insuranceIcon from "@/assets/insurance-icon.png";
 import cropIcon from "@/assets/crop-icon.png";
 import soilIcon from "@/assets/soil-icon.png";
 import iotIcon from "@/assets/iot-icon.png";
+import weatherIcon from "@/assets/weather-icon.png";
 
 
 const Dashboard = () => {
@@ -60,7 +61,7 @@ const Dashboard = () => {
       id: "weather",
       title: "Weather Forecast",
       description: "7-day weather predictions and agricultural advisories",
-      icon: <Cloud className="h-8 w-8" />,
+      icon: <img src={weatherIcon} className="h-15 w-24" alt="Weather Icon" />,
       color: "secondary",
       stats: "7-Day Forecast",
       link: "https://weather-app-navy-nine-35.vercel.app/",
