@@ -59,15 +59,21 @@ const Dashboard = () => {
     },
 
     {
-      id: "weather",
-      title: "Weather Forecast",
-      description: "7-day weather predictions and agricultural advisories",
-      icon: <img src={weatherIcon} className="h-15 w-24" alt="Weather Icon" />,
-      color: "secondary",
-      stats: "7-Day Forecast",
-      link: "https://weather-app-navy-nine-35.vercel.app/",
-      external: true
-    },
+  id: "weather",
+  title: "Weather Forecast",
+  description: "7-day weather predictions and agricultural advisories",
+  icon: (
+    <img 
+      src={weatherIcon} 
+      alt="Weather Icon" 
+      className="h-16 w-20 object-contain"
+    />
+  ),
+  color: "secondary",
+  stats: "7-Day Forecast",
+  link: "https://weather-app-navy-nine-35.vercel.app/",
+  external: true
+},
 
     // ⭐ NEW INSURANCE CARD
     {
