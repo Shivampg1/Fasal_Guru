@@ -22,10 +22,9 @@ export default function Insurance() {
 
   // Yield state
   const [yieldData, setYieldData] = useState({
-    farm_location: "",
-    crop_type: "",
-    season: "",
+    parcel_geo: "",
   });
+
 
   const [response, setResponse] = useState<any>(null);
 
@@ -64,12 +63,12 @@ export default function Insurance() {
   };
 
   // Yield handler
-  const handleYield = async () => {
-    const parcel_geo = yieldData.farm_location;
-    const res = await getYield(parcel_geo);
+    const handleYield = async () => {
+    const res = await getYield(yieldData.parcel_geo);
     console.log(res);
     setResponse(res);
   };
+
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
