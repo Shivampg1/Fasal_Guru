@@ -48,7 +48,7 @@ const Dashboard = () => {
       id: "iot-dashboard",
       title: "IoT Sensor Data",
       description: "Monitor real-time environmental conditions and farm parameters",
-      icon: <Activity className="h-8 w-8" />,
+      icon: <img src={iotIcon} className="h-15 w-24" alt="Iot Icon" />,
       bgImage: iotIcon,
       color: "primary",
       stats: "Live Data",
