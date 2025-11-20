@@ -7,6 +7,8 @@ export default function Insurance() {
     farmer_name: "",
     aadhar_number: "",
     mobile: "",
+    crop: "",
+    season: "", 
     parcel_geo: "",
     premium: "",
   });
@@ -37,6 +39,8 @@ export default function Insurance() {
       farmer_name: enrolData.farmer_name,
       aadhar_number: enrolData.aadhar_number,
       mobile: enrolData.mobile,
+      crop: enrolData.crop,
+      season: enrolData.season,
       parcel_geo: enrolData.parcel_geo,
       premium: Number(enrolData.premium),
     };
