@@ -30,11 +30,17 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
   ];
 
   const secondaryItems = [
-    { id: "profile", label: "Profile", icon: <User className="h-5 w-5" /> },
-    { id: "reports", label: "Reports", icon: <FileText className="h-5 w-5" /> },
-    { id: "settings", label: "Settings", icon: <Settings className="h-5 w-5" /> },
-    { id: "help", label: "Help", icon: <HelpCircle className="h-5 w-5" /> }
-  ];
+  { 
+    id: "profile", 
+    label: "Profile", 
+    icon: <User className="h-5 w-5" />,
+    external: "https://fasalguru.wuaze.com/index.html"  // ⭐ ADD THIS
+  },
+  { id: "reports", label: "Reports", icon: <FileText className="h-5 w-5" /> },
+  { id: "settings", label: "Settings", icon: <Settings className="h-5 w-5" /> },
+  { id: "help", label: "Help", icon: <HelpCircle className="h-5 w-5" /> }
+];
+
 
   return (
     <Card className="bg-gradient-card border-0 shadow-soft sticky top-20 h-fit">
@@ -63,16 +69,36 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
         <div className="border-t pt-4">
           <h3 className="text-sm font-medium text-muted-foreground mb-3">More</h3>
           {secondaryItems.map((item) => (
-            <Button
-              key={item.id}
-              variant="ghost"
-              className="w-full justify-start mb-1 hover:bg-accent"
-              onClick={() => onModuleChange(item.id)}
-            >
-              {item.icon}
-              <span className="ml-2 text-sm">{item.label}</span>
-            </Button>
-          ))}
+  item.external ? (
+    // ⭐ OPEN EXTERNAL LINK
+    <a 
+      key={item.id}
+      href={item.external}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button
+        variant="ghost"
+        className="w-full justify-start mb-1 hover:bg-accent"
+      >
+        {item.icon}
+        <span className="ml-2 text-sm">{item.label}</span>
+      </Button>
+    </a>
+  ) : (
+    // INTERNAL NAVIGATION
+    <Button
+      key={item.id}
+      variant="ghost"
+      className="w-full justify-start mb-1 hover:bg-accent"
+      onClick={() => onModuleChange(item.id)}
+    >
+      {item.icon}
+      <span className="ml-2 text-sm">{item.label}</span>
+    </Button>
+  )
+))}
+
         </div>
       </div>
     </Card>
