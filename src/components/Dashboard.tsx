@@ -12,6 +12,7 @@ import {
 
 import { Link } from "react-router-dom"; // <-- IMPORTANT
 
+import yieldIcon from "@/assets/dssat.png";
 import weatherIcon from "@/assets/weather-icon.png";
 import insuranceIcon from "@/assets/insurance-icon.png";
 import cropIcon from "@/assets/crop-icon.png";
@@ -85,7 +86,18 @@ const Dashboard = () => {
       stats: "Insurance",
       link: "/insurance",
       external: false
-    }
+    },
+    {
+  id: "yield-estimator",
+  title: "Yield Estimator",
+  description: "Predict crop yield using AI & geo-data",
+  icon: <img src={yieldIcon} className="h-15 w-24" alt="dssat Icon" />,   // OR <img src={yieldIcon} className="h-12 w-12" />
+  color: "primary",
+  stats: "AI Model",
+  link: "https://huggingface.co/spaces/cropdiseasedetection/dssat-detection-yield-prediction",   // 🚀 Internal route
+  external: false
+}
+    
   ];
 
   return (
