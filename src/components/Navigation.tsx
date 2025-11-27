@@ -21,13 +21,49 @@ interface NavigationProps {
 
 const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
   const navigationItems = [
-    { id: "dashboard", label: "Dashboard", icon: <Home className="h-5 w-5" />, color: "primary" },
-    { id: "crop-disease", label: "Crop Disease", icon: <Camera className="h-5 w-5" />, color: "success" },
-    { id: "soil-analysis", label: "Soil Analysis", icon: <TestTube2 className="h-5 w-5" />, color: "warning" },
-    { id: "iot-dashboard", label: "IoT Sensors", icon: <Activity className="h-5 w-5" />, color: "primary" },
-    { id: "weather", label: "Weather", icon: <Cloud className="h-5 w-5" />, color: "secondary" },
-    { id: "voice-assistant", label: "Voice Assistant", icon: <Mic className="h-5 w-5" />, color: "success" }
-  ];
+  { id: "dashboard", label: "Dashboard", icon: <Home className="h-5 w-5" />, color: "primary" },
+
+  // ⭐ Add your EXTERNAL links here:
+  { 
+    id: "crop-disease", 
+    label: "Crop Disease",
+    icon: <Camera className="h-5 w-5" />, 
+    color: "success",
+    link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app"
+  },
+
+  { 
+    id: "soil-analysis",
+    label: "Soil Analysis",
+    icon: <TestTube2 className="h-5 w-5" />, 
+    color: "warning",
+    link: "https://huggingface.co/spaces/soildetect/soil-detection-app"
+  },
+
+  { 
+    id: "iot-dashboard",
+    label: "IoT Sensors",
+    icon: <Activity className="h-5 w-5" />,
+    color: "primary"
+  },
+
+  { 
+    id: "weather",
+    label: "Weather",
+    icon: <Cloud className="h-5 w-5" />,
+    color: "secondary",
+    link: "https://weather-app-navy-nine-35.vercel.app/"
+  },
+
+  { 
+    id: "voice-assistant",
+    label: "Voice Assistant",
+    icon: <Mic className="h-5 w-5" />, 
+    color: "success",
+    link: "https://jarvis-flask-alpha.vercel.app/"
+  },
+];
+
 
   const secondaryItems = [
   { 
