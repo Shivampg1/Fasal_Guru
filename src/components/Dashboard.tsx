@@ -90,7 +90,7 @@ const Dashboard = () => {
     {
   id: "yield-estimator",
   title: "Yield Estimator",
-  description: "Predict crop yield using AI & geo-data",
+  description: "DSSAT-based yield estimator",
   icon: <img src={yieldIcon} className="h-15 w-24" alt="dssat Icon" />,   // OR <img src={yieldIcon} className="h-12 w-12" />
   color: "primary",
   stats: "AI Model",
