@@ -2,6 +2,9 @@ import { Bell, User, Menu, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
+import myLogo from "@/assets/my-logo.png";
+
+
 const Header = () => {
   return (
     <header className="bg-card border-b border-border shadow-soft sticky top-0 z-50">
@@ -11,9 +14,12 @@ const Header = () => {
             <Menu className="h-5 w-5" />
           </Button>
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-success rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">FG</span>
-            </div>
+            <img
+                 src={myLogo}
+                 alt="App Logo"
+                 className="w-10 h-10 object-contain rounded-full"
+               />
+
             <h1 className="text-xl font-bold text-primary hidden sm:block">FasalGuru</h1>
           </div>
         </div>
