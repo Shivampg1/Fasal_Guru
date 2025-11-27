@@ -92,7 +92,14 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
                   ? `bg-${item.color} hover:bg-${item.color}-hover text-${item.color}-foreground` 
                   : "hover:bg-accent"
               }`}
-              onClick={() => onModuleChange(item.id)}
+              onClick={() => {
+                 if (item.url) {
+                 window.open(item.url, "_blank");
+                  } else {
+                      onModuleChange(item.id);
+                         }
+                  }}
+
             >
               <span className={activeModule === item.id ? "text-white" : `text-${item.color}`}>
                 {item.icon}
