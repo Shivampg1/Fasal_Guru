@@ -93,8 +93,8 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
                   : "hover:bg-accent"
               }`}
               onClick={() => {
-                 if (item.url) {
-                 window.open(item.url, "_blank");
+                 if (item.link) {
+                 window.open(item.link, "_blank");
                   } else {
                       onModuleChange(item.id);
                          }
