@@ -12,6 +12,7 @@ import {
 
 import { Link } from "react-router-dom"; // <-- IMPORTANT
 
+import satelliteIcon from "@/assets/satellite-icon.png";
 import yieldIcon from "@/assets/dssat.png";
 import weatherIcon from "@/assets/weather-icon.png";
 import insuranceIcon from "@/assets/insurance-icon.png";
@@ -96,7 +97,18 @@ const Dashboard = () => {
   stats: "AI Model",
   link: "https://huggingface.co/spaces/cropdiseasedetection/dssat-detection-yield-prediction",   // 🚀 Internal route
   external: false
-}
+},
+    {
+  id: "highres-insights",
+  title: "High-Resolution Crop Insights",
+  description: "Get satellite-based vegetation and crop health analytics",
+  icon: <img src="/satellite-icon.png" className="h-10 w-10" alt="Satellite Icon" />,
+  color: "primary",
+  stats: "Satellite Data",
+  link: "https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring",
+  external: true
+},
+
     
   ];
 
