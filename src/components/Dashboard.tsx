@@ -102,12 +102,12 @@ const Dashboard = () => {
   id: "highres-insights",
   title: "High-Resolution Crop Insights",
   description: "Get satellite-based vegetation and crop health analytics",
-  icon: <img src="/satellite-icon.png" className="h-10 w-10" alt="Satellite Icon" />,
+  icon: <img src={satelliteIcon} className="h-10 w-10" alt="Satellite Icon" />,
   color: "primary",
   stats: "Satellite Data",
   link: "https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring",
   external: true
-},
+}
 
     
   ];
