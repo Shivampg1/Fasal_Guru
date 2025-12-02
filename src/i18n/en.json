@@ -1,0 +1,8 @@
+{
+  "appName": "FasalGuru",
+  "welcomeMessage": "Welcome to FasalGuru",
+  "cropDisease": "Crop Disease Detection",
+  "soilAnalysis": "Soil Analysis",
+  "weatherForecast": "Weather Forecast",
+  "iotDashboard": "IoT Sensor Dashboard"
+}
