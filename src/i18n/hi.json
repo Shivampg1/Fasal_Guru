@@ -1,8 +1,12 @@
 {
-  "appName": "फसल गुरु",
-  "welcomeMessage": "फसल गुरु में आपका स्वागत है",
-  "cropDisease": "फसल रोग पहचान",
-  "soilAnalysis": "मिट्टी विश्लेषण",
-  "weatherForecast": "मौसम का पूर्वानुमान",
-  "iotDashboard": "IoT सेंसर डैशबोर्ड"
+  "app_name": "फसलगुरु",
+  "welcome": "फसलगुरु में आपका स्वागत है",
+  "tagline": "फसल की हर बात, गुरु के साथ!",
+  "dashboard": "डैशबोर्ड",
+  "crop_disease": "फसल रोग पहचान",
+  "soil_analysis": "मृदा विश्लेषण",
+  "weather": "मौसम पूर्वानुमान",
+  "voice_assistant": "वॉइस सहायक",
+  "profile": "प्रोफ़ाइल",
+  "settings": "सेटिंग्स"
 }
