@@ -1,0 +1,8 @@
+{
+  "appName": "फसल गुरु",
+  "welcomeMessage": "फसल गुरु में आपका स्वागत है",
+  "cropDisease": "फसल रोग पहचान",
+  "soilAnalysis": "मिट्टी विश्लेषण",
+  "weatherForecast": "मौसम का पूर्वानुमान",
+  "iotDashboard": "IoT सेंसर डैशबोर्ड"
+}
