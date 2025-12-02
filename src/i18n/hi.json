@@ -1,12 +1,10 @@
 {
-  "app_name": "फसलगुरु",
-  "welcome": "फसलगुरु में आपका स्वागत है",
-  "tagline": "फसल की हर बात, गुरु के साथ!",
+  "appName": "फसल गुरु",
   "dashboard": "डैशबोर्ड",
-  "crop_disease": "फसल रोग पहचान",
-  "soil_analysis": "मृदा विश्लेषण",
+  "cropDisease": "फसल रोग पहचान",
+  "soilAnalysis": "मृदा विश्लेषण",
   "weather": "मौसम पूर्वानुमान",
-  "voice_assistant": "वॉइस सहायक",
+  "voiceAssistant": "आवाज़ सहायक",
   "profile": "प्रोफ़ाइल",
   "settings": "सेटिंग्स"
 }
