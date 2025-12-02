@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import { 
   Camera, 
   TestTube, 
@@ -23,10 +24,12 @@ import iotIcon from "@/assets/iot-icon.png";
 
 
 const Dashboard = () => {
+  const { t } = useTranslation();
+  
   const modules = [
     {
       id: "crop-disease",
-      title: "Crop Disease Detection",
+      title: t("Crop Disease Detection"),
       description: "Upload crop images to detect diseases and get treatment recommendations",
       icon: <img src={cropIcon} className="h-15 w-24" alt="Crop Icon" />,
       bgImage: cropIcon,
@@ -38,7 +41,7 @@ const Dashboard = () => {
 
     {
       id: "soil-analysis",
-      title: "Soil Analysis",
+      title: t("Soil Analysis"),
       description: "Analyze soil health, nutrients and get fertilizer recommendations",
       icon: <img src={soilIcon} className="h-15 w-24" alt="Soil Icon" />,
       bgImage: soilIcon,
@@ -50,7 +53,7 @@ const Dashboard = () => {
 
     {
       id: "iot-dashboard",
-      title: "IoT Sensor Data",
+      title: t("IoT Sensor Data"),
       description: "Monitor real-time environmental conditions and farm parameters",
       icon: <img src={iotIcon} className="h-15 w-24" alt="Iot Icon" />,
       bgImage: iotIcon,
@@ -62,7 +65,7 @@ const Dashboard = () => {
 
     {
   id: "weather",
-  title: "Weather Forecast",
+  title: t("Weather Forecast"),
   description: "7-day weather predictions and agricultural advisories",
   icon: (
     <img 
@@ -80,7 +83,7 @@ const Dashboard = () => {
     // ⭐ NEW INSURANCE CARD
     {
       id: "insurance",
-      title: "PMFBY Insurance",
+      title: t("PMFBY Insurance"),
       description: "Enrol farmers, submit claims & get yield estimation",
       icon: <img src={insuranceIcon} className="h-20 w-28" alt="Insurance Icon" />,
       color: "accent",
@@ -90,7 +93,7 @@ const Dashboard = () => {
     },
     {
   id: "yield-estimator",
-  title: "Yield Estimator",
+  title: t("Yield Estimator"),
   description: "DSSAT-based yield estimator",
   icon: <img src={yieldIcon} className="h-15 w-24" alt="dssat Icon" />,   // OR <img src={yieldIcon} className="h-12 w-12" />
   color: "primary",
@@ -100,7 +103,7 @@ const Dashboard = () => {
 },
     {
   id: "highres-insights",
-  title: "High-Resolution Crop Insights",
+  title: t("High-Resolution Crop Insights"),
   description: "Get satellite-based vegetation and crop health analytics",
   icon: <img src={satelliteIcon} className="h-20 w-23" alt="Satellite Icon" />,
   color: "primary",
