@@ -1,8 +1,12 @@
 {
-  "appName": "FasalGuru",
-  "welcomeMessage": "Welcome to FasalGuru",
-  "cropDisease": "Crop Disease Detection",
-  "soilAnalysis": "Soil Analysis",
-  "weatherForecast": "Weather Forecast",
-  "iotDashboard": "IoT Sensor Dashboard"
+  "app_name": "FasalGuru",
+  "welcome": "Welcome to FasalGuru",
+  "tagline": "Every crop matter, with the guru's guidance!",
+  "dashboard": "Dashboard",
+  "crop_disease": "Crop Disease Detection",
+  "soil_analysis": "Soil Analysis",
+  "weather": "Weather Forecast",
+  "voice_assistant": "Voice Assistant",
+  "profile": "Profile",
+  "settings": "Settings"
 }
