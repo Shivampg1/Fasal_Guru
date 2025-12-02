@@ -1,41 +1,62 @@
 import { Bell, User, Menu, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 import myLogo from "@/assets/my-logo.png";
-
 
 const Header = () => {
   return (
     <header className="bg-card border-b border-border shadow-soft sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        
+        {/* LEFT SIDE LOGO */}
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />
           </Button>
+
           <div className="flex items-center gap-2">
             <img
-                 src={myLogo}
-                 alt="App Logo"
-                 className="w-10 h-10 object-contain rounded-full"
-               />
-
-            <h1 className="text-xl font-bold text-primary hidden sm:block">FasalGuru</h1>
+              src={myLogo}
+              alt="App Logo"
+              className="w-10 h-10 object-contain rounded-full"
+            />
+            <h1 className="text-xl font-bold text-primary hidden sm:block">
+              FasalGuru
+            </h1>
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        {/* RIGHT SIDE ICONS + LANGUAGE SELECTOR */}
+        <div className="flex items-center gap-3">
+          
+          {/* 🌐 LANGUAGE SELECTOR */}
+          <select
+            className="border rounded px-2 py-1 text-sm"
+            onChange={(e) => {
+              localStorage.setItem("lang", e.target.value);
+              window.location.reload();
+            }}
+            defaultValue={localStorage.getItem("lang") || "en"}
+          >
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+            <option value="mr">मराठी</option>
+            <option value="bn">বাংলা</option>
+            <option value="pa">ਪੰਜਾਬੀ</option>
+          </select>
+
           <Button
-             variant="ghost"
-             size="icon"
-             className="relative"
-             onClick={() => window.open("https://jarvis-flask-alpha.vercel.app/", "_blank")}
-             >
+            variant="ghost"
+            size="icon"
+            className="relative"
+            onClick={() =>
+              window.open("https://jarvis-flask-alpha.vercel.app/", "_blank")
+            }
+          >
             <Mic className="h-5 w-5 text-success" />
             <span className="absolute -top-1 -right-1 w-3 h-3 bg-success rounded-full animate-pulse"></span>
           </Button>
 
-          
           <Button variant="ghost" size="icon" className="relative">
             <Bell className="h-5 w-5" />
             <span className="absolute -top-1 -right-1 w-2 h-2 bg-danger rounded-full"></span>
