@@ -13,7 +13,8 @@ import soilIcon from "@/assets/soil-icon.png";
 import iotIcon from "@/assets/iot-icon.png";
 
 const Dashboard = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+  console.log("Current language:", i18n.language);
 
   const modules = [
     {
