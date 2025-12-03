@@ -1,12 +1,12 @@
 import { Bell, User, Menu, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useTranslation } from "react-i18next"; // <-- ADD THIS
+import { useTranslation } from "react-i18next";
 
 import myLogo from "@/assets/my-logo.png";
 
 const Header = () => {
-  const { i18n } = useTranslation(); // <-- ADD THIS
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -26,20 +26,20 @@ const Header = () => {
               className="w-10 h-10 object-contain rounded-full"
             />
             <h1 className="text-xl font-bold text-primary hidden sm:block">
-              {i18n.t("appName")}  {/* <-- TRANSLATED NAME */}
+              {t("appName")}
             </h1>
           </div>
         </div>
 
         <div className="flex items-center gap-4">
-
           {/* 🌐 LANGUAGE SELECTOR */}
           <select
-            className="border px-2 py-1 rounded-md"
+            className="border px-2 py-1 rounded-md bg-background"
+            value={i18n.language}
             onChange={(e) => changeLanguage(e.target.value)}
           >
-            <option value="en">English</option>
-            <option value="hi">हिन्दी</option>
+            <option value="en">EN</option>
+            <option value="hi">हिं</option>
           </select>
 
           <Button
