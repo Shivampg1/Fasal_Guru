@@ -7,7 +7,7 @@ import {
   Cloud, 
   Mic,
   ArrowRight,
-  FileText
+  FileText 
 } from "lucide-react";
 
 import { Link } from "react-router-dom"; // <-- IMPORTANT
