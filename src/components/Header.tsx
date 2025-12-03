@@ -20,7 +20,7 @@ const Header = () => {
               className="w-10 h-10 object-contain rounded-full"
             />
             <h1 className="text-xl font-bold text-primary hidden sm:block">
-              {i18n.("appName")}  {/* <-- TRANSLATED NAME */}
+              FASAL GURU
             </h1>
           </div>
         </div>
