@@ -1,17 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { 
-  Camera, 
-  TestTube, 
-  Activity,
-  Cloud, 
-  Mic,
-  ArrowRight,
-  FileText
-} from "lucide-react";
-
-import { Link } from "react-router-dom"; // <-- IMPORTANT
+import { ArrowRight, Mic } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import satelliteIcon from "@/assets/satellite-icon.png";
 import yieldIcon from "@/assets/dssat.png";
@@ -21,98 +12,80 @@ import cropIcon from "@/assets/crop-icon.png";
 import soilIcon from "@/assets/soil-icon.png";
 import iotIcon from "@/assets/iot-icon.png";
 
-
-
 const Dashboard = () => {
   const { t } = useTranslation();
-  
+
   const modules = [
     {
       id: "crop-disease",
-      title: t("Crop Disease Detection"),
-      description: "Upload crop images to detect diseases and get treatment recommendations",
+      titleKey: "cropDisease",
+      descKey: "cropDiseaseDesc",
       icon: <img src={cropIcon} className="h-15 w-24" alt="Crop Icon" />,
-      bgImage: cropIcon,
       color: "success",
-      stats: "94% Accuracy",
+      statsKey: "accuracy",
       link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app",
       external: true
     },
-
     {
       id: "soil-analysis",
-      title: t("Soil Analysis"),
-      description: "Analyze soil health, nutrients and get fertilizer recommendations",
+      titleKey: "soilAnalysis",
+      descKey: "soilAnalysisDesc",
       icon: <img src={soilIcon} className="h-15 w-24" alt="Soil Icon" />,
-      bgImage: soilIcon,
       color: "warning",
-      stats: "NPK Analysis",
+      statsKey: "npkAnalysis",
       link: "https://huggingface.co/spaces/soildetect/soil-detection-app",
       external: true
     },
-
     {
       id: "iot-dashboard",
-      title: t("IoT Sensor Data"),
-      description: "Monitor real-time environmental conditions and farm parameters",
-      icon: <img src={iotIcon} className="h-15 w-24" alt="Iot Icon" />,
-      bgImage: iotIcon,
+      titleKey: "iotSensor",
+      descKey: "iotSensorDesc",
+      icon: <img src={iotIcon} className="h-15 w-24" alt="IoT Icon" />,
       color: "primary",
-      stats: "Live Data",
+      statsKey: "liveData",
       link: "",
       external: false
     },
-
     {
-  id: "weather",
-  title: t("Weather Forecast"),
-  description: "7-day weather predictions and agricultural advisories",
-  icon: (
-    <img 
-      src={weatherIcon} 
-      alt="Weather Icon" 
-      className="h-16 w-20 object-contain"
-    />
-  ),
-  color: "secondary",
-  stats: "7-Day Forecast",
-  link: "https://weather-app-navy-nine-35.vercel.app/",
-  external: true
-},
-
-    // ⭐ NEW INSURANCE CARD
+      id: "weather",
+      titleKey: "weatherForecast",
+      descKey: "weatherForecastDesc",
+      icon: <img src={weatherIcon} alt="Weather Icon" className="h-16 w-20 object-contain" />,
+      color: "secondary",
+      statsKey: "sevenDayForecast",
+      link: "https://weather-app-navy-nine-35.vercel.app/",
+      external: true
+    },
     {
       id: "insurance",
-      title: t("PMFBY Insurance"),
-      description: "Enrol farmers, submit claims & get yield estimation",
+      titleKey: "insurance",
+      descKey: "insuranceDesc",
       icon: <img src={insuranceIcon} className="h-20 w-28" alt="Insurance Icon" />,
       color: "accent",
-      stats: "Insurance",
+      statsKey: "insuranceLabel",
       link: "/insurance",
       external: false
     },
     {
-  id: "yield-estimator",
-  title: t("Yield Estimator"),
-  description: "DSSAT-based yield estimator",
-  icon: <img src={yieldIcon} className="h-15 w-24" alt="dssat Icon" />,   // OR <img src={yieldIcon} className="h-12 w-12" />
-  color: "primary",
-  stats: "AI Model",
-  link: "https://huggingface.co/spaces/cropdiseasedetection/dssat-detection-yield-prediction",   // 🚀 Internal route
-  external: false
-},
+      id: "yield-estimator",
+      titleKey: "yieldEstimator",
+      descKey: "yieldEstimatorDesc",
+      icon: <img src={yieldIcon} className="h-15 w-24" alt="DSSAT Icon" />,
+      color: "primary",
+      statsKey: "aiModel",
+      link: "https://huggingface.co/spaces/cropdiseasedetection/dssat-detection-yield-prediction",
+      external: true
+    },
     {
-  id: "highres-insights",
-  title: t("High-Resolution Crop Insights"),
-  description: "Get satellite-based vegetation and crop health analytics",
-  icon: <img src={satelliteIcon} className="h-20 w-23" alt="Satellite Icon" />,
-  color: "primary",
-  stats: "Satellite Data",
-  link: "https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring",
-  external: true
-}
-
-    
+      id: "highres-insights",
+      titleKey: "satelliteInsights",
+      descKey: "satelliteInsightsDesc",
+      icon: <img src={satelliteIcon} className="h-20 w-23" alt="Satellite Icon" />,
+      color: "primary",
+      statsKey: "satelliteData",
+      link: "https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring",
+      external: true
+    }
   ];
 
   return (
@@ -120,13 +93,13 @@ const Dashboard = () => {
       {/* Welcome Section */}
       <div className="bg-gradient-to-r from-primary via-success to-warning rounded-xl p-6 text-white relative overflow-hidden">
         <div className="relative z-10">
-          <h2 className="text-2xl font-bold mb-2">Welcome to FasalGuru</h2>
-          <p className="text-white/90 mb-4">Your AI-powered farming assistant for better crop management</p>
+          <h2 className="text-2xl font-bold mb-2">{t("welcomeTitle")}</h2>
+          <p className="text-white/90 mb-4">{t("welcomeDesc")}</p>
 
           <a href="https://jarvis-flask-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
             <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
               <Mic className="h-4 w-4 mr-2" />
-              Ask Voice Assistant
+              {t("askVoiceAssistant")}
             </Button>
           </a>
         </div>
@@ -135,7 +108,7 @@ const Dashboard = () => {
       {/* Main Modules */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {modules.map((module) => (
-          <Card 
+          <Card
             key={module.id}
             className="group hover:shadow-strong transition-all duration-300 cursor-pointer bg-gradient-card border-0 overflow-hidden"
           >
@@ -147,31 +120,29 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className={`text-xs font-medium px-2 py-1 rounded-full bg-${module.color}/10 text-${module.color}`}>
-                  {module.stats}
+                  {t(module.statsKey)}
                 </div>
               </div>
               <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                {module.title}
+                {t(module.titleKey)}
               </CardTitle>
               <CardDescription className="text-sm">
-                {module.description}
+                {t(module.descKey)}
               </CardDescription>
             </CardHeader>
 
             <CardContent>
               {module.external ? (
-                // 🌐 External link (open in new tab)
                 <a href={module.link} target="_blank" rel="noopener noreferrer">
                   <Button className="w-full group-hover:bg-primary-hover transition-colors">
-                    Open Module
+                    {t("openModule")}
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </a>
               ) : (
-                // 🔗 Internal routing using React Router
                 <Link to={module.link}>
                   <Button className="w-full group-hover:bg-primary-hover transition-colors">
-                    Open Module
+                    {t("openModule")}
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
