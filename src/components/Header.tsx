@@ -1,16 +1,10 @@
 import { Bell, User, Menu, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useTranslation } from "react-i18next"; // <-- ADD THIS
 
 import myLogo from "@/assets/my-logo.png";
 
 const Header = () => {
-  const { i18n } = useTranslation(); // <-- ADD THIS
-
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
 
   return (
     <header className="bg-card border-b border-border shadow-soft sticky top-0 z-50">
@@ -26,22 +20,12 @@ const Header = () => {
               className="w-10 h-10 object-contain rounded-full"
             />
             <h1 className="text-xl font-bold text-primary hidden sm:block">
-              {i18n.t("appName")}  {/* <-- TRANSLATED NAME */}
+              {i18n.("appName")}  {/* <-- TRANSLATED NAME */}
             </h1>
           </div>
         </div>
 
         <div className="flex items-center gap-4">
-
-          {/* 🌐 LANGUAGE SELECTOR */}
-          <select
-            className="border px-2 py-1 rounded-md"
-            onChange={(e) => changeLanguage(e.target.value)}
-          >
-            <option value="en">English</option>
-            <option value="hi">हिन्दी</option>
-          </select>
-
           <Button
             variant="ghost"
             size="icon"
