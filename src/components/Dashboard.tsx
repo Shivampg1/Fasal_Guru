@@ -12,6 +12,7 @@ import {
 
 import { Link } from "react-router-dom"; // <-- IMPORTANT
 
+import eMandiIcon from "@/assets/e-krishimandi.png";
 import satelliteIcon from "@/assets/satellite-icon.png";
 import yieldIcon from "@/assets/dssat.png";
 import weatherIcon from "@/assets/weather-icon.png";
@@ -107,7 +108,17 @@ const Dashboard = () => {
   stats: "Satellite Data",
   link: "https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring",
   external: true
-}
+},
+    {
+    id: "e-mandi",
+    title: "E-Mandi Live Price",
+    description: "Get real-time mandi rates for crops",
+    icon: <img src={eMandiIcon} className="h-20 w-24" alt="E-Mandi Icon" />,
+    color: "success",
+    stats: "Market Price",
+    link: "https://YOUR-EMANDI-URL-HERE",
+    external: true
+  }
 
     
   ];
