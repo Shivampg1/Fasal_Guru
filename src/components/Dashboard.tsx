@@ -60,7 +60,7 @@ const Dashboard = () => {
 
     { id:"e-mandi", title:"E-Mandi Live Price", description:"Track real-time mandi crop price",
       icon:<img src={eMandiIcon} className="h-16 w-20" />, stats:"Market Rate",
-      link:"https://YOUR-EMANDI-URL.COM", external:true },
+      link:"https://huggingface.co/spaces/fasalguru/eNam-Mandi-prices", external:true },
   ];
 
   return (
