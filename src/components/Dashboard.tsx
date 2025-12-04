@@ -106,7 +106,7 @@ const Dashboard = () => {
       <div className="overflow-hidden w-full">
         <div className="flex gap-6 animate-scroll whitespace-nowrap">
           {teamImages.map((img,i) => (
-            <img key={i} src={img} className="w-40 h-40 rounded-full border-4 border-green-400 object-cover shadow-lg"/>
+            <img key={i} src={img} className="w-40 h-40 border-4 border-green-400 object-cover shadow-lg rounded-xl"/>
           ))}
         </div>
       </div>
