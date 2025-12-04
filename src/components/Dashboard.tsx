@@ -113,7 +113,7 @@ const Dashboard = () => {
     id: "e-mandi",
     title: "E-Mandi Live Price",
     description: "Get real-time mandi rates for crops",
-    icon: <img src={eMandiIcon} className="h-20 w-24" alt="E-Mandi Icon" />,
+    icon: <img src={eMandiIcon} className="h-15 w-24" alt="E-Mandi Icon" />,
     color: "success",
     stats: "Market Price",
     link: "https://YOUR-EMANDI-URL-HERE",
