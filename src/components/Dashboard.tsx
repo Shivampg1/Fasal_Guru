@@ -101,7 +101,7 @@ const Dashboard = () => {
 
 
       {/* 🚀 TEAM SECTION — SCROLLING */}
-      <h2 className="text-center text-2xl font-bold text-primary mt-12">Meet Our Team</h2>
+      <h2 className="text-center text-2xl font-bold text-primary mt-12">FARMER'S REVIEW</h2>
 
       <div className="overflow-hidden w-full">
         <div className="flex gap-6 animate-scroll whitespace-nowrap">
