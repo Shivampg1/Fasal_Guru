@@ -12,6 +12,7 @@ import {
 
 import { Link } from "react-router-dom"; // <-- IMPORTANT
 
+
 import eMandiIcon from "@/assets/e-krishimandi.png";
 import satelliteIcon from "@/assets/satellite-icon.png";
 import yieldIcon from "@/assets/dssat.png";
@@ -20,6 +21,20 @@ import insuranceIcon from "@/assets/insurance-icon.png";
 import cropIcon from "@/assets/crop-icon.png";
 import soilIcon from "@/assets/soil-icon.png";
 import iotIcon from "@/assets/iot-icon.png";
+/* 🔥 TEAM IMAGES */
+import team1 from "@/assets/team/team1.jpeg";
+import team2 from "@/assets/team/team2.jpeg";
+import team3 from "@/assets/team/team3.jpeg";
+import team4 from "@/assets/team/team4.jpeg";
+import team5 from "@/assets/team/team5.jpeg";
+import team6 from "@/assets/team/team6.jpeg";
+import team7 from "@/assets/team/team7.jpeg";
+import team8 from "@/assets/team/team8.jpeg";
+import team9 from "@/assets/team/team9.jpeg";
+import team10 from "@/assets/team/team10.jpeg";
+/* ARRAY – Add members here */
+const teamImages = [team1, team2, team3, team4, team5, team6, team7, team8, team9, team10];
+
 
 
 
@@ -190,6 +205,35 @@ const Dashboard = () => {
       </div>
     </div>
   );
+  {/* 🚀 OUR TEAM — AUTO SLIDING GALLERY */}
+<div className="mt-16">
+  <h2 className="text-2xl font-bold text-center text-primary mb-6">
+    Meet Our Team
+  </h2>
+
+  <div className="overflow-hidden w-full relative">
+    <div
+      className="flex gap-6 animate-scroll whitespace-nowrap"
+      style={{ animation: "scroll 18s linear infinite" }}
+    >
+      {teamImages.map((img, i) => (
+        <div key={i} className="w-60 h-60 rounded-xl overflow-hidden shadow-lg border">
+          <img src={team1} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team2} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team3} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team4} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team5} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team6} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team7} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team8} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team9} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+          <img src={team10} className="w-40 h-40 rounded-full shadow-lg border-4 border-green-400 object-cover" />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 };
 
 export default Dashboard;
