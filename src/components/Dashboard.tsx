@@ -75,7 +75,7 @@ const Dashboard = () => {
             (Farm Advisory System for Agricultural Land)
           </p>
         <p className="opacity-90">AI-powered assistant for farmers</p>
-        <a href="https://jarvis1-wgir.onrender.com">
+        <a href="https://huggingface.co/spaces/fasalguru/jarvisai">
           <Button className="mt-4 bg-white text-primary">
             <Mic className="mr-2"/> Ask Voice Assistant
           </Button>
