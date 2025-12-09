@@ -33,9 +33,9 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
   },
 
   {
-  id: "soil",
+  id: "soil-check",  // 👈 Match your screenshot
   label: "Soil Check",
-  icon: <div style={{fontSize: '20px'}}>🌱</div>,  // Simple plant icon
+  icon: <span className="text-xl">🌱</span>,
   color: "emerald",
 },
 
