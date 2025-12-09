@@ -60,7 +60,7 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
     label: "Voice Assistant",
     icon: <Mic className="h-5 w-5" />, 
     color: "success",
-    link: "https://jarvis-flask-alpha.vercel.app/"
+    link: "https://jarvis1-wgir.onrender.com"
   },
 ];
 
@@ -94,7 +94,7 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
               }`}
               onClick={() => {
                  if (item.link) {
-                 window.open(item.link, "_blank");
+                 window.location.href = item.link;
                   } else {
                       onModuleChange(item.id);
                          }
