@@ -18,15 +18,12 @@ import {
 } from "@/components/ui/dialog";
 import { toast } from "@/hooks/use-toast";
 import {
-  User,
-  Bell,
   Tractor,
   Settings as SettingsIcon,
   Shield,
   Info,
   Database,
   MessageSquare,
-  Camera,
   Save,
   Trash2,
   Download,
@@ -39,24 +36,6 @@ import {
 } from "lucide-react";
 
 const Settings = () => {
-  // Account Settings State
-  const [profile, setProfile] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    location: "",
-    language: "hindi",
-  });
-
-  // Notification Preferences
-  const [notifications, setNotifications] = useState({
-    weatherAlerts: true,
-    cropAdvisory: true,
-    marketPrices: true,
-    smsNotifications: false,
-    emailNotifications: true,
-  });
-
   // Farm Profile
   const [farms, setFarms] = useState([
     {
@@ -96,22 +75,6 @@ const Settings = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [clearDataDialogOpen, setClearDataDialogOpen] = useState(false);
-
-  const handleSaveProfile = async () => {
-    setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    localStorage.setItem("fasalGuru_profile", JSON.stringify(profile));
-    setIsLoading(false);
-    toast({ title: "प्रोफाइल सहेजा गया!", description: "Profile saved successfully!" });
-  };
-
-  const handleSaveNotifications = async () => {
-    setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    localStorage.setItem("fasalGuru_notifications", JSON.stringify(notifications));
-    setIsLoading(false);
-    toast({ title: "सूचना प्राथमिकताएं अपडेट!", description: "Notification preferences updated!" });
-  };
 
   const handleExportData = (format: string) => {
     toast({
@@ -168,9 +131,9 @@ const Settings = () => {
 
   return (
     <div className="space-y-6">
-      <Tabs defaultValue="account" className="space-y-6">
-        <TabsList className="grid grid-cols-4 lg:grid-cols-7 gap-1 h-auto p-1 bg-muted">
-          
+      {/* ⭐ CHANGED defaultValue from "account" to "farm" so it doesn't show empty page */}
+      <Tabs defaultValue="farm" className="space-y-6">
+        <TabsList className="grid grid-cols-4 lg:grid-cols-6 gap-1 h-auto p-1 bg-muted">
           <TabsTrigger value="farm" className="flex flex-col items-center gap-1 py-2 text-xs">
             <Tractor className="h-4 w-4" />
             <span className="hidden sm:inline">Farm</span>
@@ -196,8 +159,6 @@ const Settings = () => {
             <span className="hidden sm:inline">Support</span>
           </TabsTrigger>
         </TabsList>
-
-        {/* Account Settings */}
 
         {/* Farm Profile */}
         <TabsContent value="farm" className="space-y-6">
@@ -416,7 +377,7 @@ const Settings = () => {
                     </SelectTrigger>
                     <SelectContent className="bg-card">
                       <SelectItem value="INR">₹ INR (Indian Rupee)</SelectItem>
-                      <SelectItem value="USD">\$ USD (US Dollar)</SelectItem>
+                      <SelectItem value="USD">$ USD (US Dollar)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -585,9 +546,9 @@ const Settings = () => {
                 <span className="font-medium">2024.12.001</span>
               </div>
               <div className="space-y-2 pt-4">
-                <p className="block py-2 text-primary">Terms & Conditions / नियम और शर्तें</p>
-                <p className="block py-2 text-primary">Privacy Policy / गोपनीयता नीति</p>
-                <p className="block py-2 text-primary">Licenses & Attributions / लाइसेंस</p>
+                <p className="block py-2 text-primary cursor-pointer hover:underline">Terms & Conditions / नियम और शर्तें</p>
+                <p className="block py-2 text-primary cursor-pointer hover:underline">Privacy Policy / गोपनीयता नीति</p>
+                <p className="block py-2 text-primary cursor-pointer hover:underline">Licenses & Attributions / लाइसेंस</p>
               </div>
             </CardContent>
           </Card>
