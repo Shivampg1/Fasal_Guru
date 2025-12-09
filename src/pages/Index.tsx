@@ -1,3 +1,4 @@
+import Help from "@/components/Help";  // Add this line with other imports
 import Settings from "@/components/Settings";
 import { useState } from "react";
 import Header from "@/components/Header";
@@ -42,12 +43,7 @@ const Index = () => {
             case "settings":
         return <Settings />;
       case "help":
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-2xl font-bold text-muted-foreground">Help & Support</h2>
-            <p className="text-muted-foreground mt-2">Documentation and support coming soon...</p>
-          </div>
-        );
+  return <Help />;
       default:
         return <Dashboard />;
     }
