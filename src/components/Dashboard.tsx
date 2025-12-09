@@ -68,7 +68,7 @@ const Dashboard = () => {
 
       {/* HERO */}
       <div className="bg-gradient-to-r from-primary via-success to-warning text-white p-6 rounded-lg">
-        <h2 className="text-3xl font-bold">Welcome to FasalGuru</h2>
+        <h2 className="text-3xl font-bold">Welcome to FASAL Guru</h2>
         <p className="text-4xl md:text-2xl text-white mb-6">
             (Farm Advisory System for Agricultural Land)
           </p>
