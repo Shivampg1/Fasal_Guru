@@ -55,13 +55,13 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
     link: "https://weather-app-navy-nine-35.vercel.app/"
   },
 
-  {
-  id: "voice-assistant",
-  title: "Voice Assistant",
-  description: "AI Jarvis chat",
-  icon: "🎤",
-  component: VoiceAssistantModule
-},
+  { 
+    id: "weather",
+    label: "Weather",
+    icon: <Cloud className="h-5 w-5" />,
+    color: "secondary",
+    link: "https://weather-app-navy-nine-35.vercel.app/"
+  },
 ];
 
 
