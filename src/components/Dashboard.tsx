@@ -50,7 +50,7 @@ const Dashboard = () => {
 
     { id:"crop-disease", title:"Crop Disease Detection", description:"Upload crop images to detect diseases and get treatment recommendations",
       icon:<img src={cropIcon} className="h-16 w-20" />, stats:"94% Accuracy",
-      link:"https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app", external:false },
+      link: "/crop-disease", external:false },
 
     { id:"soil-analysis", title:"Soil Analysis", description:"Analyze soil health & fertilizer suggestion",
       icon:<img src={soilIcon} className="h-16 w-20" />, stats:"NPK Scan",
