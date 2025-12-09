@@ -38,17 +38,18 @@ const Header = () => {
           </Button>
 
           {/* Mic button (unchanged) */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="relative"
-            onClick={() =>
-              window.open("https://jarvis-flask-alpha.vercel.app/", "_blank")
-            }
-          >
-            <Mic className="h-5 w-5 text-success" />
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-success rounded-full animate-pulse"></span>
-          </Button>
+          {/* Mic button - Opens in SAME TAB */}
+<Button
+  variant="ghost"
+  size="icon"
+  className="relative"
+  onClick={() => {
+    window.location.href = "https://jarvis1-wgir.onrender.com";
+  }}
+>
+  <Mic className="h-5 w-5 text-success" />
+  <span className="absolute -top-1 -right-1 w-3 h-3 bg-success rounded-full animate-pulse"></span>
+</Button>
         </div>
       </div>
     </header>
