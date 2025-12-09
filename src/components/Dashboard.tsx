@@ -38,8 +38,8 @@ const Dashboard = () => {
 
     { id:"yield-estimator", title:"Yield Estimator", description:"DSSAT-based estimation",
       icon:<img src={yieldIcon} className="h-16 w-20" />, stats:"AI Model",
-      link:"https://huggingface.co/spaces/cropdiseasedetection/dssat-detection-yield-prediction", external:false },
-
+      link: "/yield-estimator", external:false },
+    
     { id:"insurance", title:"PMFBY Insurance", description:"Enroll farmers, claim & yield",
       icon:<img src={insuranceIcon} className="h-16 w-20" />, stats:"Gov Scheme",
       link:"/insurance", external:false },
