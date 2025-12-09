@@ -122,7 +122,7 @@ const Index = () => {
 
           {/* Main Content */}
           <div className="lg:col-span-3 space-y-6">
-            {activeModule !== "dashboard" && (
+            {activeModule !== "dashboard" && activeModule !== "settings" && activeModule !== "help" && (
               <div className="bg-gradient-card rounded-lg p-4 shadow-soft border-0">
                 <h1 className="text-2xl font-bold text-primary">{getModuleTitle()}</h1>
                 <p className="text-muted-foreground text-sm mt-1">
