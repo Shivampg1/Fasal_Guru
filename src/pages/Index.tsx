@@ -88,7 +88,7 @@ const Index = () => {
           <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
             <div className="text-white">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Welcome to <span className="text-warning">FasalGuru</span>
+                Welcome to <span className="text-warning">FASAL Guru</span>
               </h1>
               <div className="mb-6 h-16 flex flex-col justify-center">
                 <p className="text-xl md:text-2xl text-white/90 animate-fade-in">
