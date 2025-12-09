@@ -60,7 +60,7 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
     label: "Voice Assistant",
     icon: <Mic className="h-5 w-5" />, 
     color: "success",
-    link: "https://jarvis1-wgir.onrender.com"
+    link: "https://huggingface.co/spaces/fasalguru/jarvisai"
   },
 ];
 
