@@ -1,3 +1,4 @@
+import Settings from "@/components/Settings";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
@@ -38,13 +39,8 @@ const Index = () => {
             <p className="text-muted-foreground mt-2">Downloadable reports coming soon...</p>
           </div>
         );
-      case "settings":
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-2xl font-bold text-muted-foreground">System Settings</h2>
-            <p className="text-muted-foreground mt-2">Configuration panel coming soon...</p>
-          </div>
-        );
+            case "settings":
+        return <Settings />;
       case "help":
         return (
           <div className="text-center py-12">
