@@ -54,7 +54,7 @@ const Dashboard = () => {
 
     { id:"soil-analysis", title:"Soil Analysis", description:"Analyze soil health & fertilizer suggestion",
       icon:<img src={soilIcon} className="h-16 w-20" />, stats:"NPK Scan",
-      link:"https://huggingface.co/spaces/soildetect/soil-detection-app", external:false },
+      link: "/soil-analysis", external:false },
 
     { id:"weather", title:"Weather Forecast", description:"7-Day forecast + advisories",
       icon:<img src={weatherIcon} className="h-16 w-20" />, stats:"Weather AI",
