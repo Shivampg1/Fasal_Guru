@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HighResInsights from "./pages/HighResInsights";
 import YieldEstimator from "./pages/YieldEstimator";
+import EMandi from "./pages/EMandi";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/insurance" element={<Insurance />} />
           <Route path="/highres-insights" element={<HighResInsights />} />
           <Route path="/yield-estimator" element={<YieldEstimator />} />
+          <Route path="/e-mandi" element={<EMandi />} />
 
           {/* CATCH-ALL ROUTE */}
           <Route path="*" element={<NotFound />} />
