@@ -33,7 +33,7 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
   },
 
   {
-  id: "soil-check",  // 👈 Match your screenshot
+  id: "soil-analysis",  // ✅ Matches Index switch
   label: "Soil Check",
   icon: <span className="text-xl">🌱</span>,
   color: "emerald",
