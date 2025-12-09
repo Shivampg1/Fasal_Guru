@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import VoiceAssistantModule from "./VoiceAssistantModule";
 import { 
   Home, 
   Camera, 
@@ -54,13 +55,13 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
     link: "https://weather-app-navy-nine-35.vercel.app/"
   },
 
-  { 
-    id: "voice-assistant",
-    label: "Voice Assistant",
-    icon: <Mic className="h-5 w-5" />, 
-    color: "success",
-    link: "https://huggingface.co/spaces/fasalguru/jarvisai"
-  },
+  {
+  id: "voice-assistant",
+  title: "Voice Assistant",
+  description: "AI Jarvis chat",
+  icon: "🎤",
+  component: VoiceAssistantModule
+},
 ];
 
 
