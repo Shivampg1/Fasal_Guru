@@ -31,14 +31,7 @@ const teamImages = [team1, team2, team3, team4, team5, team6, team7, team8, team
 const Dashboard = () => {
 
   const modules = [
-    { id:"crop-disease", title:"Crop Disease Detection", description:"Upload crop images to detect diseases and get treatment recommendations",
-      icon:<img src={cropIcon} className="h-16 w-20" />, stats:"94% Accuracy",
-      link:"https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app", external:false },
-
-    { id:"soil-analysis", title:"Soil Analysis", description:"Analyze soil health & fertilizer suggestion",
-      icon:<img src={soilIcon} className="h-16 w-20" />, stats:"NPK Scan",
-      link:"https://huggingface.co/spaces/soildetect/soil-detection-app", external:false },
-
+  
     { id:"highres-insights", title:"High-Res Crop Insights", description:"Satellite NDVI + Vegetation",
       icon:<img src={satelliteIcon} className="h-16 w-20" />, stats:"Satellite AI",
       link:"https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring", external:false },
@@ -54,6 +47,14 @@ const Dashboard = () => {
     { id:"e-mandi", title:"E-Mandi Live Price", description:"Track real-time mandi crop price",
       icon:<img src={eMandiIcon} className="h-16 w-20" />, stats:"Market Rate",
       link:"https://huggingface.co/spaces/fasalguru/eNam-Mandi-prices", external:false },
+
+    { id:"crop-disease", title:"Crop Disease Detection", description:"Upload crop images to detect diseases and get treatment recommendations",
+      icon:<img src={cropIcon} className="h-16 w-20" />, stats:"94% Accuracy",
+      link:"https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app", external:false },
+
+    { id:"soil-analysis", title:"Soil Analysis", description:"Analyze soil health & fertilizer suggestion",
+      icon:<img src={soilIcon} className="h-16 w-20" />, stats:"NPK Scan",
+      link:"https://huggingface.co/spaces/soildetect/soil-detection-app", external:false },
 
     { id:"weather", title:"Weather Forecast", description:"7-Day forecast + advisories",
       icon:<img src={weatherIcon} className="h-16 w-20" />, stats:"Weather AI",
