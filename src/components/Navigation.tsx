@@ -53,7 +53,7 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
     icon: <Cloud className="h-5 w-5" />,
     color: "secondary",
     link: "https://weather-app-navy-nine-35.vercel.app/"
-  },
+  }
 
 ];
 
