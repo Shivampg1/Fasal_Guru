@@ -32,13 +32,12 @@ const Navigation = ({ activeModule, onModuleChange }: NavigationProps) => {
     link: "https://huggingface.co/spaces/cropdiseasedetection/crop-disease-detector-app"
   },
 
-  { 
-    id: "soil-analysis",
-    label: "Soil Analysis",
-    icon: <TestTube2 className="h-5 w-5" />, 
-    color: "warning",
-    link: "https://huggingface.co/spaces/soildetect/soil-detection-app"
-  },
+  {
+  id: "soil",
+  label: "Soil Check",
+  icon: <div style={{fontSize: '20px'}}>🌱</div>,  // Simple plant icon
+  color: "emerald",
+},
 
   { 
     id: "iot-dashboard",
