@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HighResInsights from "./pages/HighResInsights";
+import YieldEstimator from "./pages/YieldEstimator";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -24,6 +25,7 @@ const App = () => (
           {/* ✅ ADD YOUR INSURANCE PAGE ROUTE */}
           <Route path="/insurance" element={<Insurance />} />
           <Route path="/highres-insights" element={<HighResInsights />} />
+          <Route path="/yield-estimator" element={<YieldEstimator />} />
 
           {/* CATCH-ALL ROUTE */}
           <Route path="*" element={<NotFound />} />
