@@ -46,7 +46,7 @@ const Dashboard = () => {
     
     { id:"e-mandi", title:"E-Mandi Live Price", description:"Track real-time mandi crop price",
       icon:<img src={eMandiIcon} className="h-16 w-20" />, stats:"Market Rate",
-      link:"https://huggingface.co/spaces/fasalguru/eNam-Mandi-prices", external:false },
+      link: "/e-mandi", external:false },
 
     { id:"crop-disease", title:"Crop Disease Detection", description:"Upload crop images to detect diseases and get treatment recommendations",
       icon:<img src={cropIcon} className="h-16 w-20" />, stats:"94% Accuracy",
