@@ -8,7 +8,7 @@ import CropDiseaseDetection from "@/components/CropDiseaseDetection";
 import SoilAnalysis from "@/components/SoilAnalysis";
 import IoTDashboard from "@/components/IoTDashboard";
 import WeatherForecast from "@/components/WeatherForecast";
-import VoiceAssistantModule from "./components/VoiceAssistantModule";
+import VoiceAssistantModule from "@/components/VoiceAssistantModule";  // ✅ @/ = src/components/
 import heroImage from "@/assets/hero-agriculture.jpg";
 
 const Index = () => {
