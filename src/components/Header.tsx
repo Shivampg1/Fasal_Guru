@@ -44,7 +44,7 @@ const Header = () => {
   size="icon"
   className="relative"
   onClick={() => {
-    window.location.href = "https://jarvis1-wgir.onrender.com";
+    window.location.href = "https://huggingface.co/spaces/fasalguru/jarvisai";
   }}
 >
   <Mic className="h-5 w-5 text-success" />
