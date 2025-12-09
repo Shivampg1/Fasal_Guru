@@ -69,6 +69,9 @@ const Dashboard = () => {
       {/* HERO */}
       <div className="bg-gradient-to-r from-primary via-success to-warning text-white p-6 rounded-lg">
         <h2 className="text-3xl font-bold">Welcome to FasalGuru</h2>
+        <p className="text-4xl md:text-2xl text-white mb-6">
+            (Farm Advisory System for Agricultural Land)
+          </p>
         <p className="opacity-90">AI-powered assistant for farmers</p>
         <a href="https://jarvis-flask-alpha.vercel.app/" target="_blank">
           <Button className="mt-4 bg-white text-primary">
