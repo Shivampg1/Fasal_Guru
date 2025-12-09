@@ -34,7 +34,7 @@ const Dashboard = () => {
   
     { id:"highres-insights", title:"High-Res Crop Insights", description:"Satellite NDVI + Vegetation",
       icon:<img src={satelliteIcon} className="h-16 w-20" />, stats:"Satellite AI",
-      link:"https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring", external:false },
+      link: "/highres-insights", external:false },
 
     { id:"yield-estimator", title:"Yield Estimator", description:"DSSAT-based estimation",
       icon:<img src={yieldIcon} className="h-16 w-20" />, stats:"AI Model",
