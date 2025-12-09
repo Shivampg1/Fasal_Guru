@@ -1,4 +1,4 @@
-import { Menu, Mic } from "lucide-react";
+import { Menu, Mic, MapPin } from "lucide-react";  // 👈 Added MapPin icon
 import { Button } from "@/components/ui/button";
 
 import myLogo from "@/assets/my-logo.png";
@@ -24,6 +24,20 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-4">
+          {/* 👇 LOCATION BUTTON - Opens in SAME TAB */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="relative"
+            onClick={() => {
+              window.location.href = "https://coordinates-app.netlify.app/";
+            }}
+          >
+            <MapPin className="h-5 w-5 text-primary" />
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-pulse"></span>
+          </Button>
+
+          {/* Mic button (unchanged) */}
           <Button
             variant="ghost"
             size="icon"
