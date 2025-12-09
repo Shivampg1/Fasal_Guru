@@ -8,7 +8,7 @@ import CropDiseaseDetection from "@/components/CropDiseaseDetection";
 import SoilAnalysis from "@/components/SoilAnalysis";
 import IoTDashboard from "@/components/IoTDashboard";
 import WeatherForecast from "@/components/WeatherForecast";
-import VoiceAssistant from "@/components/VoiceAssistant";
+import VoiceAssistantModule from "./components/VoiceAssistantModule";
 import heroImage from "@/assets/hero-agriculture.jpg";
 
 const Index = () => {
@@ -25,7 +25,7 @@ const Index = () => {
       case "weather":
         return <WeatherForecast />;
       case "voice-assistant":
-        return <VoiceAssistant />;
+  return <VoiceAssistantModule />;
       case "profile":
         return (
           <div className="text-center py-12">
