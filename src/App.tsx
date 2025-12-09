@@ -7,6 +7,7 @@ import HighResInsights from "./pages/HighResInsights";
 import YieldEstimator from "./pages/YieldEstimator";
 import EMandi from "./pages/EMandi";
 import CropDisease from "./pages/CropDisease";
+import SoilAnalysis from "./pages/SoilAnalysis";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/yield-estimator" element={<YieldEstimator />} />
           <Route path="/e-mandi" element={<EMandi />} />
           <Route path="/crop-disease" element={<CropDisease />} />
+          <Route path="/soil-analysis" element={<SoilAnalysis />} />
 
           {/* CATCH-ALL ROUTE */}
           <Route path="*" element={<NotFound />} />
