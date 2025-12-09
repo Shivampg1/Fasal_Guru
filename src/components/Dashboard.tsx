@@ -39,28 +39,29 @@ const Dashboard = () => {
       icon:<img src={soilIcon} className="h-16 w-20" />, stats:"NPK Scan",
       link:"https://huggingface.co/spaces/soildetect/soil-detection-app", external:false },
 
-    { id:"iot-dashboard", title:"IoT Sensor Data", description:"Monitor farm conditions live",
-      icon:<img src={iotIcon} className="h-16 w-20" />, stats:"Live Data", link:"", external:false },
-
-    { id:"weather", title:"Weather Forecast", description:"7-Day forecast + advisories",
-      icon:<img src={weatherIcon} className="h-16 w-20" />, stats:"Weather AI",
-      link:"https://weather-app-navy-nine-35.vercel.app/", external:false },
-
-    { id:"insurance", title:"PMFBY Insurance", description:"Enroll farmers, claim & yield",
-      icon:<img src={insuranceIcon} className="h-16 w-20" />, stats:"Gov Scheme",
-      link:"/insurance", external:false },
+    { id:"highres-insights", title:"High-Res Crop Insights", description:"Satellite NDVI + Vegetation",
+      icon:<img src={satelliteIcon} className="h-16 w-20" />, stats:"Satellite AI",
+      link:"https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring", external:false },
 
     { id:"yield-estimator", title:"Yield Estimator", description:"DSSAT-based estimation",
       icon:<img src={yieldIcon} className="h-16 w-20" />, stats:"AI Model",
       link:"https://huggingface.co/spaces/cropdiseasedetection/dssat-detection-yield-prediction", external:false },
 
-    { id:"highres-insights", title:"High-Res Crop Insights", description:"Satellite NDVI + Vegetation",
-      icon:<img src={satelliteIcon} className="h-16 w-20" />, stats:"Satellite AI",
-      link:"https://huggingface.co/spaces/cropdiseasedetection/satellite-crop-monitoring", external:false },
-
+    { id:"insurance", title:"PMFBY Insurance", description:"Enroll farmers, claim & yield",
+      icon:<img src={insuranceIcon} className="h-16 w-20" />, stats:"Gov Scheme",
+      link:"/insurance", external:false },
+    
     { id:"e-mandi", title:"E-Mandi Live Price", description:"Track real-time mandi crop price",
       icon:<img src={eMandiIcon} className="h-16 w-20" />, stats:"Market Rate",
       link:"https://huggingface.co/spaces/fasalguru/eNam-Mandi-prices", external:false },
+
+    { id:"weather", title:"Weather Forecast", description:"7-Day forecast + advisories",
+      icon:<img src={weatherIcon} className="h-16 w-20" />, stats:"Weather AI",
+      link:"https://weather-app-navy-nine-35.vercel.app/", external:false },
+    
+    { id:"iot-dashboard", title:"IoT Sensor Data", description:"Monitor farm conditions live",
+      icon:<img src={iotIcon} className="h-16 w-20" />, stats:"Live Data", link:"", external:false },
+
   ];
 
   return (
